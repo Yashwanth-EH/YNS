@@ -1,2 +1,3 @@
-# yns
-it is an website for YNS
+# YNS COMPANY [PVT].LTD., 
+
+It is an website for YNS COMPANY [PVT].LTD.,
