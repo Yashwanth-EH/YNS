@@ -61,6 +61,9 @@
         nav {
             text-align: center;
             margin: 10px 0; /* Reduced margin */
+            display: flex; /* Flexbox for horizontal alignment */
+            justify-content: center; /* Center the navigation items */
+            flex-wrap: wrap; /* Wrap items on smaller screens */
         }
 
         nav a {
@@ -69,7 +72,7 @@
             padding: 6px 10px; /* Smaller padding for buttons */
             border-radius: 5px;
             background-color: white;
-            margin: 0 5px;
+            margin: 5px; /* Spacing between buttons */
             box-shadow: 0 2px 5px rgba(6, 52, 202, 0.5);
             transition: background-color 0.3s, transform 0.3s;
             font-size: 0.9em; /* Smaller font size */
@@ -126,13 +129,12 @@
 
         @media (max-width: 768px) { /* Mobile devices */
             nav {
-                flex-direction: column; /* Stack links on smaller screens */
+                flex-direction: row; /* Keep buttons in a row */
                 align-items: center; /* Center links */
             }
             nav a {
-                margin: 5px 0; /* Smaller margin between links */
-                width: 100%; /* Full-width buttons */
-                max-width: 200px; /* Max width for buttons */
+                margin: 5px; /* Smaller margin between links */
+                width: auto; /* Adjust width for buttons */
             }
             .container {
                 margin: 5px; /* Smaller margins */
