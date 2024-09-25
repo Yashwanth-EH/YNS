@@ -27,7 +27,7 @@
         }
 
         .background {
-            background-image: url("image1.png"); /* Background image */
+            background-image: url("image1.png"); /* Replace with your background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
             animation: moveBackground 30s linear infinite; /* Adjust speed here */
@@ -46,14 +46,8 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-            transform-style: preserve-3d; /* Preserve 3D space */
-            transition: transform 0.5s; /* Smooth transition */
             position: relative; /* Allow stacking context */
             z-index: 1; /* Bring form container above the background */
-        }
-
-        .form-container:hover {
-            transform: rotateY(5deg); /* Slight rotation on hover for 3D effect */
         }
 
         input[type="text"],
