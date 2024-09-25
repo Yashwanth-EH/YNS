@@ -55,7 +55,7 @@
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 15px 20px; /* Increased padding for header */
+            padding: 15px 0; /* Increased padding for header */
             text-align: center;
             position: relative; /* For absolute positioning of menu icon */
         }
@@ -64,18 +64,10 @@
             display: none; /* Hidden by default */
             cursor: pointer; /* Show pointer on hover */
             position: absolute;
-            right: 60px; /* Position it on the right */
+            right: 20px; /* Position it on the right */
             top: 15px; /* Position it at the top */
             font-size: 30px; /* Size of the hamburger icon */
             color: white; /* Icon color */
-        }
-
-        .profile-logo {
-            position: absolute;
-            right: 20px; /* Position it on the right */
-            top: 10px; /* Align with the header text */
-            height: 40px; /* Height of the profile logo */
-            border-radius: 50%; /* Circular profile image */
         }
 
         nav {
@@ -213,7 +205,6 @@
     <header>
         <h1>YNS COMPANY [Pvt] . Ltd</h1>
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
-        <img src="profile.jpg" alt="Profile Logo" class="profile-logo"> <!-- Profile logo image -->
     </header>
     <nav id="navMenu">
         <a href="#about">About us</a>
@@ -227,4 +218,5 @@
             <h2>About us</h2>
             <p>We are passionate startup developers interested in creating amazing projects and applications.</p>
             <p>We are thrilled to present a diverse array of scientific endeavors that encapsulate the spirit of inquiry, experimentation, and innovation. Each project on display represents countless hours of research, hypothesis testing, data analysis, and creative problem-solving.</p>
-            <p>As you explore our exhibit, you'll encounter projects spanning various scientific disciplines, from physics and chemistry to biology, environmental science, and technology. Witness the awe-in
+            <p>As you explore our exhibit, you'll encounter projects spanning various scientific disciplines, from physics and chemistry to biology, environmental science, and technology. Witness the awe-inspiring beauty of the natural world through microscopy, delve into the complexities of robotics and artificial intelligence, unravel the mysteries of the universe through astronomy, and witness the transformative power of scientific advancements in medicine and engineering.</p>
+            <p>Our young scientists have embraced challenges, pushed boundaries, and sought answers to some of the most pressing questions facing our world today. From addressing environmental sustainability to
