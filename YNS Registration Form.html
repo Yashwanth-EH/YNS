@@ -6,26 +6,50 @@
     <title>YNS Registration Form</title>
     <link rel="icon" href="yns.jpg">
     <style>
-        /* Basic styling */
+        /* Base styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* Light background for contrast */
+            margin: 0;
+            padding: 0;
+            color: #010207;
+            overflow: hidden; /* Prevent scrollbars */
+            height: 100vh; /* Full height */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full height */
-            perspective: 1000px; /* Perspective for 3D effect */
+            position: relative; /* Allow absolute positioning for the background */
+        }
+
+        /* Moving background */
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        .background {
+            background-image: url("image1.png"); /* Background image */
+            background-size: cover;
+            background-repeat: repeat; /* Repeat the image */
+            animation: moveBackground 30s linear infinite; /* Adjust speed here */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send background behind content */
         }
 
         .form-container {
             width: 100%;
             max-width: 400px; /* Form width */
-            background: white; /* Background color for form */
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency for readability */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
             transform-style: preserve-3d; /* Preserve 3D space */
             transition: transform 0.5s; /* Smooth transition */
+            position: relative; /* Allow stacking context */
+            z-index: 1; /* Bring form container above the background */
         }
 
         .form-container:hover {
@@ -70,6 +94,8 @@
 </head>
 <body>
 
+<div class="background"></div> <!-- Background layer for animation -->
+
 <div class="form-container">
     <center><h2>Registration Form</h2></center>
 
@@ -92,4 +118,3 @@
 
 </body>
 </html>
-
