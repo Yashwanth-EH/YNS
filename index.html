@@ -6,7 +6,7 @@
     <title>YNS COMPANY [Pvt] . Ltd</title>
     <meta name="description" content="YNS Company is a passionate startup dedicated to creating amazing projects and applications across various scientific disciplines.">
     <link rel="icon" href="yns.jpg">
-    
+
     <style>
         /* Base styles */
         body {
@@ -55,8 +55,27 @@
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 15px 0; /* Increased padding for header */
+            padding: 15px 20px; /* Increased padding for header */
             text-align: center;
+            position: relative; /* For absolute positioning of menu icon */
+        }
+
+        .menu-icon {
+            display: none; /* Hidden by default */
+            cursor: pointer; /* Show pointer on hover */
+            position: absolute;
+            right: 60px; /* Position it on the right */
+            top: 15px; /* Position it at the top */
+            font-size: 30px; /* Size of the hamburger icon */
+            color: white; /* Icon color */
+        }
+
+        .profile-logo {
+            position: absolute;
+            right: 20px; /* Position it on the right */
+            top: 10px; /* Align with the header text */
+            height: 40px; /* Height of the profile logo */
+            border-radius: 50%; /* Circular profile image */
         }
 
         nav {
@@ -65,6 +84,18 @@
             display: flex; /* Flexbox for horizontal alignment */
             justify-content: center; /* Center the navigation items */
             flex-wrap: wrap; /* Wrap items on smaller screens */
+            display: none; /* Hidden by default */
+        }
+
+        nav.active {
+            display: flex; /* Show nav when active */
+            flex-direction: column; /* Stack links vertically */
+            width: 100%; /* Full width */
+            background: rgba(255, 255, 255, 0.9); /* Background for nav */
+            position: absolute; /* Position relative to header */
+            top: 70px; /* Below header */
+            left: 0; /* Align left */
+            z-index: 10; /* Bring it above other content */
         }
 
         nav a {
@@ -124,6 +155,9 @@
             header h1 {
                 font-size: 2em; /* Adjust header size */
             }
+            .menu-icon {
+                display: block; /* Show hamburger icon */
+            }
             nav a {
                 padding: 10px 25px; /* Larger padding for better touch target */
                 font-size: 1em; /* Adjust font size */
@@ -178,8 +212,10 @@
     <div class="background"></div> <!-- Background layer for animation -->
     <header>
         <h1>YNS COMPANY [Pvt] . Ltd</h1>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
+        <img src="profile.jpg" alt="Profile Logo" class="profile-logo"> <!-- Profile logo image -->
     </header>
-    <nav>
+    <nav id="navMenu">
         <a href="#about">About us</a>
         <a href="#Project works">Project works</a>
         <a href="#contact us">Contact us</a>
@@ -191,19 +227,4 @@
             <h2>About us</h2>
             <p>We are passionate startup developers interested in creating amazing projects and applications.</p>
             <p>We are thrilled to present a diverse array of scientific endeavors that encapsulate the spirit of inquiry, experimentation, and innovation. Each project on display represents countless hours of research, hypothesis testing, data analysis, and creative problem-solving.</p>
-            <p>As you explore our exhibit, you'll encounter projects spanning various scientific disciplines, from physics and chemistry to biology, environmental science, and technology. Witness the awe-inspiring beauty of the natural world through microscopy, delve into the complexities of robotics and artificial intelligence, unravel the mysteries of the universe through astronomy, and witness the transformative power of scientific advancements in medicine and engineering.</p>
-            <p>Our young scientists have embraced challenges, pushed boundaries, and sought answers to some of the most pressing questions facing our world today. From addressing environmental sustainability to exploring the frontiers of space exploration, each project embodies the passion and dedication of our future leaders in science and technology.</p>
-            <p>We invite you to engage with our exhibits, interact with our budding scientists, and be inspired by the endless possibilities that science offers. Together, let's celebrate curiosity, discovery, and the quest for knowledge that drives scientific progress and shapes our collective future. Welcome to a world of scientific wonders!</p>
-        </section>
-        <section id="Project works">
-            <h2>Project works</h2>
-            <p>Check out some of our works:</p>
-            <p>No specific projects listed at this time.</p> <!-- Placeholder text -->
-        </section>
-        <section id="contact us">
-            <h2>Contact us</h2>
-            <p>Feel free to get in touch:</p>
-            <ul>
-                <li><a href="YNS Registration Form.html">Register here</a></li>
-                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Funder & CEO</a></li>
-                <li>Email: <a href="mailto:yesswanthe2006@gmail.com">yeshwanthe200
+            <p>As you explore our exhibit, you'll encounter projects spanning various scientific disciplines, from physics and chemistry to biology, environmental science, and technology. Witness the awe-in
