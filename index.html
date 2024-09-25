@@ -112,10 +112,16 @@
         }
 
         img {
-            max-width: 80%; /* Adjust the logo size */
+            max-width: 50%; /* Adjust the logo size to make it smaller */
             height: auto;
             margin: 0 auto; /* Center the image */
             display: block; /* Make it block to center properly */
+            animation: rotateImage 10s linear infinite; /* Rotation effect */
+        }
+
+        @keyframes rotateImage {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Media Queries for Responsiveness */
@@ -204,6 +210,4 @@
             <p>Feel free to get in touch:</p>
             <ul>
                 <li><a href="YNS Registration Form.html">Register here</a></li>
-                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Funder & CEO</a></li>
-                <li>Email: <a href="mailto:yesswanthe2006@gmail.com">yeshwanthe2006@gmail.com</a></li>
-                <li>Phone:
+                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener
