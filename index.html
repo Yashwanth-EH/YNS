@@ -20,22 +20,17 @@
             flex-direction: column; /* Vertical layout */
         }
 
-        /* Moving background with rotation */
+        /* Moving background */
         @keyframes moveBackground {
             0% { background-position: 0 0; }
             100% { background-position: 100% 0; }
-        }
-
-        @keyframes rotateBackground {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
         }
 
         .background {
             background-image: url("image1.png"); /* Background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite, rotateBackground 60s linear infinite; /* Adjust speed here */
+            animation: moveBackground 30s linear infinite; /* Adjust speed here */
             position: absolute;
             top: 0;
             left: 0;
@@ -116,12 +111,12 @@
             height: auto;
             margin: 0 auto; /* Center the image */
             display: block; /* Make it block to center properly */
-            animation: rotateImage 10s linear infinite; /* Rotation effect */
+            animation: rotateImage 10s linear infinite; /* Horizontal rotation effect */
         }
 
         @keyframes rotateImage {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
         }
 
         /* Media Queries for Responsiveness */
@@ -210,4 +205,5 @@
             <p>Feel free to get in touch:</p>
             <ul>
                 <li><a href="YNS Registration Form.html">Register here</a></li>
-                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener
+                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Funder & CEO</a></li>
+                <li>Email: <a href="mailto:yesswanthe2006@gmail.com">yeshwanthe200
