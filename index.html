@@ -20,17 +20,22 @@
             flex-direction: column; /* Vertical layout */
         }
 
-        /* Moving background */
+        /* Moving background with rotation */
         @keyframes moveBackground {
             0% { background-position: 0 0; }
             100% { background-position: 100% 0; }
+        }
+
+        @keyframes rotateBackground {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .background {
             background-image: url("image1.png"); /* Background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite; /* Adjust speed here */
+            animation: moveBackground 30s linear infinite, rotateBackground 60s linear infinite; /* Adjust speed here */
             position: absolute;
             top: 0;
             left: 0;
@@ -70,13 +75,14 @@
         nav a {
             text-decoration: none;
             color: #010207;
-            padding: 10px 20px; /* Increased padding for buttons */
+            padding: 12px 25px; /* Increased padding for buttons */
             border-radius: 5px;
             background-color: white;
             margin: 5px; /* Spacing between buttons */
-            box-shadow: 0 2px 5px rgba(6, 52, 202, 0.5);
+            box-shadow: 0 4px 8px rgba(6, 52, 202, 0.5);
             transition: background-color 0.3s, transform 0.3s;
             font-size: 1em; /* Increased font size */
+            font-weight: bold; /* Bold text */
             display: inline-block; /* Make sure buttons behave like block elements */
         }
 
@@ -200,12 +206,4 @@
                 <li><a href="YNS Registration Form.html">Register here</a></li>
                 <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Funder & CEO</a></li>
                 <li>Email: <a href="mailto:yesswanthe2006@gmail.com">yeshwanthe2006@gmail.com</a></li>
-                <li>Phone: 8072873208</li>
-            </ul>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 YNS COMPANY [Pvt] . Ltd</p>
-    </footer>
-</body>
-</html>
+                <li>Phone:
