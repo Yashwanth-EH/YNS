@@ -53,19 +53,19 @@
 
         nav {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px; /* Reduced margin */
         }
 
         nav a {
             text-decoration: none;
             color: #010207;
-            padding: 8px 12px; /* Smaller padding for buttons */
+            padding: 6px 10px; /* Smaller padding for buttons */
             border-radius: 5px;
             background-color: white;
             margin: 0 5px;
             box-shadow: 0 2px 5px rgba(6, 52, 202, 0.5);
             transition: background-color 0.3s, transform 0.3s;
-            font-size: 0.9em; /* Smaller font size */
+            font-size: 0.8em; /* Smaller font size */
         }
 
         nav a:hover {
@@ -74,22 +74,26 @@
         }
 
         section {
-            padding: 20px;
-            margin-top: 20px;
+            padding: 15px; /* Smaller padding */
+            margin-top: 15px; /* Smaller margin */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 1.5em; /* Smaller section title size */
         }
 
         footer {
             background-color: rgba(0, 0, 255, 0.8);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 8px 0; /* Smaller padding */
             margin-top: 20px;
         }
 
         img {
-            max-width: 80%; /* Smaller front image */
+            max-width: 60%; /* Smaller front image */
             height: auto;
             margin: 0 auto; /* Center the image */
             display: block; /* Make it block to center properly */
@@ -99,7 +103,7 @@
         @media (max-width: 768px) {
             nav a {
                 display: block; /* Stack links on smaller screens */
-                margin: 10px 0;
+                margin: 5px 0; /* Smaller margin between links */
             }
             .container {
                 margin: 10px;
@@ -112,11 +116,11 @@
 
         @media (max-width: 480px) {
             nav a {
-                padding: 6px; /* Further adjust padding for mobile */
-                font-size: 0.8em; /* Smaller font size for mobile */
+                padding: 4px; /* Further adjust padding for mobile */
+                font-size: 0.7em; /* Smaller font size for mobile */
             }
             section h2 {
-                font-size: 1.5em; /* Adjust section title size */
+                font-size: 1.2em; /* Further adjust section title size */
             }
         }
     </style>
