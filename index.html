@@ -39,12 +39,13 @@
         nav a {
             text-decoration: none;
             color: #010207;
-            padding: 10px 20px;
+            padding: 8px 12px; /* Smaller padding for buttons */
             border-radius: 5px;
             background-color: white;
             margin: 0 5px;
             box-shadow: 0 2px 5px rgba(6, 52, 202, 0.5);
             transition: background-color 0.3s, transform 0.3s;
+            font-size: 0.9em; /* Smaller font size */
         }
         nav a:hover {
             background-color: #eaeaea;
@@ -64,8 +65,10 @@
             margin-top: 20px;
         }
         img {
-            max-width: 100%; /* Responsive image */
+            max-width: 80%; /* Smaller front image */
             height: auto;
+            margin: 0 auto; /* Center the image */
+            display: block; /* Make it block to center properly */
         }
 
         /* Media Queries for Responsiveness */
@@ -85,7 +88,8 @@
 
         @media (max-width: 480px) {
             nav a {
-                padding: 8px; /* Adjust padding for mobile */
+                padding: 6px; /* Further adjust padding for mobile */
+                font-size: 0.8em; /* Smaller font size for mobile */
             }
             section h2 {
                 font-size: 1.5em; /* Adjust section title size */
@@ -102,7 +106,7 @@
         <a href="#Project works">Project works</a>
         <a href="#contact us">Contact us</a>
         <br><br>
-        <center><img src="ynsofc.jpeg" alt="YNS Company Logo"></center>
+        <center><img src="ynsofc.jpeg" alt="YNS Company Logo"></center> <!-- Logo image here -->
     </nav>
     <div class="container">
         <section id="about">
