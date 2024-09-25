@@ -6,7 +6,7 @@
     <title>YNS COMPANY [Pvt] . Ltd</title>
     <meta name="description" content="YNS Company is a passionate startup dedicated to creating amazing projects and applications across various scientific disciplines.">
     <link rel="icon" href="yns.jpg">
-
+    
     <style>
         /* Base styles */
         body {
@@ -55,14 +55,8 @@
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 10px 0; /* Reduced padding for header */
+            padding: 15px 0; /* Increased padding for header */
             text-align: center;
-            position: fixed; /* Fixed position */
-            top: -50px; /* Hide it initially */
-            left: 0;
-            right: 0;
-            transition: top 0.3s; /* Smooth transition */
-            z-index: 1; /* Ensure it stays above content */
         }
 
         nav {
@@ -76,7 +70,7 @@
         nav a {
             text-decoration: none;
             color: #010207;
-            padding: 10px 20px; /* Reduced padding for buttons */
+            padding: 12px 25px; /* Increased padding for buttons */
             border-radius: 5px;
             background-color: white;
             margin: 5px; /* Spacing between buttons */
@@ -108,14 +102,8 @@
             background-color: rgba(0, 0, 255, 0.8);
             color: #fff;
             text-align: center;
-            padding: 5px 0; /* Reduced padding for footer */
+            padding: 8px 0; /* Smaller padding */
             margin-top: 20px;
-            position: fixed; /* Fixed position */
-            bottom: -50px; /* Hide it initially */
-            left: 0;
-            right: 0;
-            transition: bottom 0.3s; /* Smooth transition */
-            z-index: 1; /* Ensure it stays above content */
         }
 
         img {
@@ -137,7 +125,7 @@
                 font-size: 2em; /* Adjust header size */
             }
             nav a {
-                padding: 10px 20px; /* Adjust padding */
+                padding: 10px 25px; /* Larger padding for better touch target */
                 font-size: 1em; /* Adjust font size */
             }
             section {
@@ -188,7 +176,7 @@
 </head>
 <body>
     <div class="background"></div> <!-- Background layer for animation -->
-    <header id="header">
+    <header>
         <h1>YNS COMPANY [Pvt] . Ltd</h1>
     </header>
     <nav>
@@ -210,41 +198,13 @@
         <section id="Project works">
             <h2>Project works</h2>
             <p>Check out some of our works:</p>
-            <p><a href="https://github.com/YourGitHubLink" target="_blank">Yeshwanth GitHub</a></p>
+            <p><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer">Yeshwanth GitHub</a></p>
             <p>No specific projects listed at this time.</p> <!-- Placeholder text -->
         </section>
         <section id="contact us">
             <h2>Contact us</h2>
             <p>Feel free to get in touch:</p>
             <ul>
-                <li><strong><a href="YNS Registration Form.html">Register here</a></strong></li>
-                <li><strong><a href="https://www.instagram.com/y">Funder & CEO</a></strong></li>
-            </ul>
-        </section>
-    </div>
-    <footer id="footer">
-        <p>&copy; 2024 YNS Company. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Sticky Header Functionality
-        let lastScrollTop = 0;
-        const header = document.getElementById('header');
-        const footer = document.getElementById('footer');
-
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Show header and footer on scroll up
-            if (scrollTop > lastScrollTop) {
-                header.style.top = '-50px'; // Hide the header
-                footer.style.bottom = '-50px'; // Hide the footer
-            } else {
-                header.style.top = '0'; // Show the header
-                footer.style.bottom = '0'; // Show the footer
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
-        });
-    </script>
-</body>
-</html>
+                <li><a href="YNS Registration Form.html">Register here</a></li>
+                <li><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Funder & CEO</a></li>
+                <li>Email: yeshwanthe2006@gmail.com <a href="mailto
