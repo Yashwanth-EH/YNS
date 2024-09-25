@@ -55,10 +55,10 @@
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 15px 0; /* Increased padding for header */
+            padding: 10px 0; /* Reduced padding for header */
             text-align: center;
             position: fixed; /* Fixed position */
-            top: -100px; /* Hide it initially */
+            top: -50px; /* Hide it initially */
             left: 0;
             right: 0;
             transition: top 0.3s; /* Smooth transition */
@@ -76,7 +76,7 @@
         nav a {
             text-decoration: none;
             color: #010207;
-            padding: 12px 25px; /* Increased padding for buttons */
+            padding: 10px 20px; /* Reduced padding for buttons */
             border-radius: 5px;
             background-color: white;
             margin: 5px; /* Spacing between buttons */
@@ -108,12 +108,13 @@
             background-color: rgba(0, 0, 255, 0.8);
             color: #fff;
             text-align: center;
-            padding: 8px 0; /* Smaller padding */
+            padding: 5px 0; /* Reduced padding for footer */
             margin-top: 20px;
             position: fixed; /* Fixed position */
-            bottom: 0; /* Always at the bottom */
+            bottom: -50px; /* Hide it initially */
             left: 0;
             right: 0;
+            transition: bottom 0.3s; /* Smooth transition */
             z-index: 1; /* Ensure it stays above content */
         }
 
@@ -136,7 +137,7 @@
                 font-size: 2em; /* Adjust header size */
             }
             nav a {
-                padding: 10px 25px; /* Larger padding for better touch target */
+                padding: 10px 20px; /* Adjust padding */
                 font-size: 1em; /* Adjust font size */
             }
             section {
@@ -209,8 +210,8 @@
         <section id="Project works">
             <h2>Project works</h2>
             <p>Check out some of our works:</p>
-            <p><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer">Yeshwanth GitHub</a></p>
-            <p>comeing soon </p> <!-- Placeholder text -->
+            <p><a href="https://github.com/YourGitHubLink" target="_blank">Yeshwanth GitHub</a></p>
+            <p>No specific projects listed at this time.</p> <!-- Placeholder text -->
         </section>
         <section id="contact us">
             <h2>Contact us</h2>
@@ -221,7 +222,7 @@
             </ul>
         </section>
     </div>
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 YNS Company. All rights reserved.</p>
     </footer>
 
@@ -229,17 +230,20 @@
         // Sticky Header Functionality
         let lastScrollTop = 0;
         const header = document.getElementById('header');
+        const footer = document.getElementById('footer');
 
         window.addEventListener('scroll', function() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            // Show header on scroll down
+            // Show header and footer on scroll up
             if (scrollTop > lastScrollTop) {
-                header.style.top = '-100px'; // Hide the header
+                header.style.top = '-50px'; // Hide the header
+                footer.style.bottom = '-50px'; // Hide the footer
             } else {
                 header.style.top = '0'; // Show the header
+                footer.style.bottom = '0'; // Show the footer
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scrolling
         });
     </script>
 </body>
