@@ -35,7 +35,7 @@
             background-image: url("image1.png"); /* Background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite, zoomInBackground 10s linear infinite; /* Add zoom animation */
+            animation: moveBackground 30s linear infinite, zoomInBackground 5s linear infinite; /* Increased speed of zoom-in animation */
             position: absolute;
             top: 0;
             left: 0;
@@ -113,17 +113,18 @@
             margin-top: 20px;
         }
 
+        /* Image rotation: East to West */
         img {
             max-width: 30%; /* Decrease the logo size */
             height: auto;
             margin: 0 auto; /* Center the image */
             display: block; /* Make it block to center properly */
-            animation: zoomInEffect 10s linear infinite; /* Zoom-in animation for the image */
+            animation: rotateEastWest 5s linear infinite; /* East to West rotation effect */
         }
 
-        @keyframes zoomInEffect {
-            0% { transform: scale(1); } /* Start at normal size */
-            100% { transform: scale(1.2); } /* Zoom in to 120% */
+        @keyframes rotateEastWest {
+            0% { transform: rotateY(0deg); } /* Start from 0 degrees */
+            100% { transform: rotateY(360deg); } /* Rotate to 360 degrees */
         }
 
         /* Media Queries for Responsiveness */
