@@ -31,11 +31,16 @@
             100% { transform: rotateX(360deg); } /* Rotate 360 degrees around X-axis */
         }
 
+        @keyframes rotateYBackground {
+            0% { transform: rotateY(0deg); } /* Start at 0 degrees */
+            100% { transform: rotateY(360deg); } /* Rotate 360 degrees around Y-axis */
+        }
+
         .background {
             background-image: url("image1.png"); /* Background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite, rotateBackground 10s linear infinite; /* Adjust speed here */
+            animation: moveBackground 30s linear infinite, rotateBackground 10s linear infinite, rotateYBackground 10s linear infinite; /* Adjust speed here */
             position: absolute;
             top: 0;
             left: 0;
@@ -119,12 +124,12 @@
             height: auto;
             margin: 0 auto; /* Center the image */
             display: block; /* Make it block to center properly */
-            animation: rotateEastWest 10s linear infinite; /* East to West rotation effect */
+            animation: rotateWestEast 10s linear infinite; /* West to East rotation effect */
         }
 
-        @keyframes rotateEastWest {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); } /* Rotate 360 degrees around Y-axis */
+        @keyframes rotateWestEast {
+            0% { transform: rotateY(360deg); } /* Start from 360 degrees */
+            100% { transform: rotateY(0deg); } /* Rotate to 0 degrees */
         }
 
         /* Media Queries for Responsiveness */
