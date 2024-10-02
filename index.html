@@ -3,88 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YNS COMPANY [Pvt] . Ltd . , </title>
+    <title>YNS COMPANY [Pvt] . Ltd . ,</title>
     <meta name="description" content="YNS Company is a passionate startup dedicated to creating amazing projects and applications across various scientific disciplines, including robotics, AI, computer vision, and engineering.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="yns.jpg">
     
     <style>
-        /* Base styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+        * {
             padding: 0;
-            color: #010207;
-            overflow: hidden; /* Prevent scrollbars */
-            height: 100vh; /* Full height */
-            display: flex;
-            flex-direction: column; /* Vertical layout */
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
         }
 
-        /* Moving background */
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: #010207;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsive Navbar */
+        nav {
+            background: #0082e6;
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 25px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        nav a.active,
+        nav a:hover {
+            background: #1b9bff;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 22px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 890px) {
+            .checkbtn {
+                display: block;
+            }
+
+            label.logo {
+                font-size: 22px;
+                padding-left: 30px;
+            }
+
+            nav ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            nav a:hover,
+            nav a.active {
+                background: none;
+                color: #0082e6;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        /* Moving Background */
         @keyframes moveBackground {
             0% { background-position: 0 0; }
             100% { background-position: 100% 0; }
         }
 
         .background {
-            background-image: url("image1.png"); /* Background image */
+            background-image: url("image1.png");
             background-size: cover;
-            background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite; /* Adjust speed here */
+            background-repeat: repeat;
+            animation: moveBackground 30s linear infinite;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Send background behind content */
+            z-index: -1;
         }
 
         .container {
             max-width: 1200px;
-            margin: 10px auto;
+            margin: 100px auto 10px; /* Adjusted for navbar */
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight background for readability */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Allow container to grow */
+            flex-grow: 1;
             display: flex;
-            flex-direction: column; /* Stack sections vertically */
-            overflow-y: auto; /* Enable scrolling if content overflows */
+            flex-direction: column;
+            overflow-y: auto;
         }
 
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 2px 0; /* Further decreased padding */
+            padding: 10px 0;
             text-align: center;
-            font-size: 0.8em; /* Further reduced font size */
-        }
-
-        nav {
-            text-align: center;
-            margin: 10px 0;
-            display: flex; /* Flexbox for horizontal alignment */
-            justify-content: center; /* Center the navigation items */
-            flex-wrap: wrap; /* Wrap items on smaller screens */
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #010207;
-            padding: 12px 25px;
-            border-radius: 5px;
-            background-color: white;
-            margin: 5px;
-            box-shadow: 0 4px 8px rgba(6, 52, 202, 0.5);
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 1em;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #eaeaea;
-            transform: scale(1.05);
         }
 
         section {
@@ -95,130 +175,66 @@
             flex-grow: 1;
         }
 
-        section h2 {
-            font-size: 1.5em;
-        }
-
         footer {
             background-color: rgba(0, 0, 255, 0.8);
             color: #fff;
             text-align: center;
-            padding: 2px 0; /* Further decreased padding */
-            font-size: 0.8em; /* Further reduced font size */
+            padding: 10px 0;
+            font-size: 0.8em;
             margin-top: 20px;
         }
 
         img {
-            max-width: 50%; /* Adjust the logo size to make it smaller */
+            max-width: 50%;
             height: auto;
-            margin: 0 auto; /* Center the image */
-            display: block; /* Make it block to center properly */
-            animation: rotateImage 10s linear infinite; /* Horizontal rotation effect */
+            margin: 0 auto;
+            display: block;
+            animation: rotateImage 10s linear infinite;
         }
 
         @keyframes rotateImage {
             0% { transform: rotateY(0deg); }
             100% { transform: rotateY(360deg); }
         }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 1024px) { /* Tablet and smaller laptops */
-            header h1 {
-                font-size: 1.6em;
-            }
-            nav a {
-                padding: 10px 25px;
-                font-size: 1em;
-            }
-            section {
-                margin-top: 10px;
-            }
-            section h2 {
-                font-size: 1.4em;
-            }
-        }
-
-        @media (max-width: 768px) { /* Mobile devices */
-            nav {
-                flex-direction: row;
-                align-items: center;
-            }
-            nav a {
-                margin: 5px;
-                width: auto;
-            }
-            .container {
-                margin: 5px;
-                padding: 10px;
-            }
-            header h1 {
-                font-size: 1.5em;
-            }
-            section h2 {
-                font-size: 1.3em;
-            }
-            footer {
-                font-size: 0.7em;
-            }
-        }
-
-        @media (max-width: 480px) { /* Extra small devices */
-            nav a {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-            section h2 {
-                font-size: 1.2em;
-            }
-            footer {
-                font-size: 0.6em;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- Background layer for animation -->
-    <header>
-        <h1>YNS COMPANY [Pvt] . Ltd 🚀</h1>
-    </header>
+    <div class="background"></div>
+
+    <!-- Navbar Section -->
     <nav>
-        <a href="#about">About us 🎀 </a>
-        <a href="#Project works">Project works 💡</a>
-        <a href="#contact us">Contact us 📧 </a>
-        <br><br>
-        <center><img src="ynsofc.jpeg" alt="YNS Company Logo"></center> <!-- Logo image here -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">YNS COMPANY</label>
+        <ul>
+            <li><a class="active" href="#about">About us 🎀</a></li>
+            <li><a href="#Project works">Project works 💡</a></li>
+            <li><a href="#contact us">Contact us 📧</a></li>
+        </ul>
     </nav>
+
+    <!-- Main Content Section -->
     <div class="container">
+        <header>
+            <h1>YNS COMPANY [Pvt] . Ltd 🚀</h1>
+        </header>
         <section id="about">
             <h2>About us 🎀</h2>
             <p>YNS Company is a passionate startup focused on innovation and solving real-world problems. We work in exciting fields like robotics, AI, computer vision, and engineering.</p>
-            <ul>
-                <li><strong>Innovative Projects:</strong> We create new and groundbreaking technologies.</li>
-                <li><strong>Interdisciplinary Team:</strong> Our team combines skills from different fields to find the best solutions.</li>
-                <li><strong>Focus Areas:</strong> Robotics, Artificial Intelligence (AI), Computer Vision, and Engineering.</li>
-                <li><strong>Engineering Expertise:</strong> Our team excels in engineering, creating efficient systems and cutting-edge designs.</li>
-                <li><strong>Computer Vision Skills:</strong> We develop systems that allow machines to interpret and understand visual data.</li>
-                <li><strong>Real-World Solutions:</strong> We tackle everyday challenges by applying advanced technology and engineering skills.</li>
-                <li><strong>Pushing Boundaries:</strong> We’re always striving to go beyond limits in technology and research.</li>
-            </ul>
         </section>
         <section id="Project works">
-            <h2>Project works💡</h2>
+            <h2>Project works 💡</h2>
             <p>Check out some of our works:</p>
-            <p><strong><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer">Yeshwanth GitHub</a></strong> </p>
-            <p>No specific projects listed at this time.</p> <!-- Placeholder text -->
+            <p><strong><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer">Yeshwanth GitHub</a></strong></p>
         </section>
         <section id="contact us">
             <h2>Contact us 📧</h2>
-            <p>Feel free to get in touch:</p>
-            <ul>
-                <li><strong><a href="YNS Registration Form.html">Register here</a></strong> 📝</li>
-                <li><strong><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Founder & CEO</a></strong> 🦸 </li>
-                <li>Email: yeshwanthe2006@gmail.com <a href="mailto:yeshwanthe2006@gmail.com">Send Email</a> 📩 </li>
-                <li>Phone: <strong> 📞 8072873208</strong> </li>
-            </ul>
+            <p>Email: yeshwanthe2006@gmail.com <a href="mailto:yeshwanthe2006@gmail.com">Send Email</a></p>
         </section>
     </div>
+
     <footer>
         <p>&copy; 2024 YNS COMPANY [Pvt] . Ltd. All rights reserved. 🌍</p>
     </footer>
