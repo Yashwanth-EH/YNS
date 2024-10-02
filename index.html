@@ -26,11 +26,16 @@
             100% { background-position: 0 100%; }
         }
 
+        @keyframes rotateBackground {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(360deg); } /* Rotate 360 degrees around X-axis */
+        }
+
         .background {
             background-image: url("image1.png"); /* Background image */
             background-size: cover;
             background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite; /* Adjust speed here */
+            animation: moveBackground 30s linear infinite, rotateBackground 10s linear infinite; /* Adjust speed here */
             position: absolute;
             top: 0;
             left: 0;
@@ -77,7 +82,7 @@
             margin: 5px;
             box-shadow: 0 4px 8px rgba(6, 52, 202, 0.5);
             transition: background-color 0.3s, transform 0.3s;
-            font-size: 1em;
+            font-size: 1em; /* Normal font size */
             font-weight: bold;
             display: inline-block;
         }
@@ -213,7 +218,7 @@
             <p>Feel free to get in touch:</p>
             <ul>
                 <li><strong><a href="YNS Registration Form.html">Register here</a></strong> 📝</li>
-                <li><strong><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer" style="font-size: 1.2em;">Founder & CEO</a></strong> 🦸</li> <!-- Reduced font size for Founder & CEO -->
+                <li><strong><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Founder & CEO</a></strong> 🦸</li> <!-- Normal font size for Founder & CEO -->
                 <li>Email: yeshwanthe2006@gmail.com <strong><a href="mailto:yeshwanthe2006@gmail.com">Send Email</a></strong> 📩 </li>
                 <li>Phone: <strong> 📞 8072873208</strong> </li>
             </ul>
