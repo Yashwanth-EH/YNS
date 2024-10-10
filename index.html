@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeshwanth.ECE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d0cc513d47.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link rel="icon" href="ynsorg.png"> 
+    
+
+    <style>
+        body {
+            font-family: 'Dekko';
+        }
+        .learn-more-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .learn-more-section h1 {
+            margin-bottom: 50px;
+        }
+        .learn-more-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+        .learn-more-grid .grid-item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .learn-more-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .learn-more-grid .grid-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .learn-more-grid .grid-item h3 {
+            padding: 15px;
+            background: #fff;
+            margin: 0;
+            font-size: 18px;
+        }
+        /* Additional CSS for bolding */
+        .header-test span {
+            font-weight: bold; /* Make the text bold */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Existing Content -->
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Service</a></li>
+                <li><a href="#services">Works</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-test">
+            <p><span>Yeshwanth.ECE </span> </p>
+            <h1>Time to Feed your curiosity with <h2> <span class="yns" > <a href="ynsmain.html"></span>YNS</span> </a></span> </h2> <span>  </span> <br> <div class="header-test">
+                
+            </div>
+            
+        
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h2>Computer Vision Solutions</h2>
+                    <p>Object detection, object tracking, video analysis, and image processing for various applications.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h2>Machine Learning Models</h2>
+                    <p>Development and deployment of machine learning models for predictive maintenance, anomaly detection, and other use cases.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+                <div class="layer">
+                    <h2>AI-Powered Solutions</h2>
+                    <p>End-to-end AI solutions, including data preprocessing, model training, deployment, and monitoring, leveraging cutting-edge techniques like deep learning.</p>
+                    <a href="https://yashwanth-eh.github.io/YNS/#Project%20works"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<!-- Existing Works Section -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">MY Works</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-pen-nib"></i>
+                <h2>My Projects</h2>
+                <p>Innovative computer vision and machine learning solutions:</p>
+                <ul>
+                    <li>Contactless biometric systems</li>
+                    <li>Retail engagement tracking</li>
+                    <li>Predictive maintenance models</li>
+                </ul>                
+                <a href="#learn-more">Click Project</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-blog"></i>
+                <h2>MY Blog</h2>
+                <p>Sharing insightful articles, tutorials, and experiences on Computer Vision, Machine Learning, and AI-powered solutions.</p>
+                <a href="https://yashwanth-eh.github.io/YNS/#Project%20works" target="_blank">Visit Blog</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <h2>Daily Ideas</h2>
+                <p>Sharing creative ideas, inspirations, and behind-the-scenes glimpses of my projects on Instagram.</p>
+                <a href="https://www.instagram.com/yash_fx/" target="_blank">Follow on Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add this script to your existing JavaScript
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var learnMoreLink = document.querySelectorAll('a[href="#learn-more"]');
+        var learnMoreSection = document.getElementById('learn-more');
+
+        learnMoreLink.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                learnMoreSection.style.display = 'block';
+                // You can add more logic here if needed
+            });
+        });
+    });
+</script>
+
+
+<!-- New Learn More Section -->
+<div id="learn-more" class="learn-more-section" style="display: none;">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="learn-more-grid">
+            <!-- Example grid items -->
+            <div class="grid-item">
+                <a href=""><img src="1.png" alt="Image 1"><h4>Helps to find customers engagement throught camera</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link "><img src="2.png" alt="Image 2"><h4>I used MLOPS to predict the machine failures</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="3.png" alt="Image 3"><h4>Its an contactless biometric system using camera to detect palm prints</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="4.png" alt="Image 4"><h4>Contactless Gesture Controller with vending machine GUI</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="5.png" alt="Image 5"><h4>Video analytics for retail shops checkout counters</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="#"><img src="6.png" alt="Image 6"><h4>Cooking</h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="yash2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>"Hey, I'm Yashwanth, an ECE enthusiast diving into the world of computer vision and electronics, blending tech innovation with startup ambition and engineering creativity." </p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab active-tab" id="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab" id="experience">
+                        <h3>Experience</h3>
+                        <p>Interned at XYZ company, where I developed machine learning models for predictive maintenance and automated data analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          
+        </form>
+    </div>
+</div>
+
+<script>
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-200px";
+    }
+
+    function opentab(tabName) {
+        var i;
+        var tabContents = document.getElementsByClassName("tab");
+        var tabLinks = document.getElementsByClassName("tab-links");
+
+        for (i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active-tab");
+        }
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active-link");
+        }
+
+        document.getElementById(tabName).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+
+</body>
+</html>
