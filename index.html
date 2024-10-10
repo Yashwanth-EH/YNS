@@ -2,238 +2,265 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YNS COMPANY [Pvt] . Ltd </title>
-    <meta name="description" content="YNS Company is a passionate startup dedicated to creating amazing projects and applications across various scientific disciplines, including robotics, AI, computer vision, and engineering.">
-    <link rel="icon" href="ynsofc.jpg">
-    
+    <title>Yeshwanth.ECE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d0cc513d47.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+    <link rel="icon" href="ynsorg.png"> 
+
     <style>
-        /* Base styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #010207;
-            overflow: hidden; /* Prevent scrollbars */
-            height: 100vh; /* Full height */
-            display: flex;
-            flex-direction: column; /* Vertical layout */
+            font-family: 'Dekko';
         }
-
-        /* Moving background */
-        @keyframes moveBackground {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+        .learn-more-section {
+            padding: 50px 0;
+            text-align: center;
         }
-
-        @keyframes zoomInBackground {
-            0% { transform: scale(1); } /* Start at normal size */
-            100% { transform: scale(1.2); } /* Zoom in to 120% */
+        .learn-more-section h1 {
+            margin-bottom: 50px;
         }
-
-        .background {
-            background-image: url("image1.png"); /* Background image */
-            background-size: cover;
-            background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite, zoomInBackground 4s linear infinite; /* Increased speed of zoom-in animation */
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Send background behind content */
+        .learn-more-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+            padding: 0 20px;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 10px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight background for readability */
+        .learn-more-grid .grid-item {
+            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Allow container to grow */
-            display: flex;
-            flex-direction: column; /* Stack sections vertically */
-            overflow-y: auto; /* Enable scrolling if content overflows */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
-        header {
-            background-color: rgba(15, 70, 219, 0.8);
-            color: white;
-            padding: 2px 0; /* Further decreased padding */
-            text-align: center;
-            font-size: 0.8em; /* Further reduced font size */
-        }
-
-        nav {
-            text-align: center;
-            margin: 10px 0;
-            display: flex; /* Flexbox for horizontal alignment */
-            justify-content: center; /* Center the navigation items */
-            flex-wrap: wrap; /* Wrap items on smaller screens */
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #010207;
-            padding: 12px 25px;
-            border-radius: 5px;
-            background-color: white;
-            margin: 5px;
-            box-shadow: 0 4px 8px rgba(6, 52, 202, 0.5);
-            transition: background-color 0.3s, transform 0.3s;
-            font-size: 1em; /* Normal font size */
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: #eaeaea;
-            transform: scale(1.05);
-        }
-
-        section {
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex-grow: 1;
-        }
-
-        section h2 {
-            font-size: 1.5em;
-        }
-
-        footer {
-            background-color: rgba(0, 0, 255, 0.8);
-            color: #fff;
-            text-align: center;
-            padding: 10px 0; /* Increased padding */
-            font-size: 1.2em; /* Increased font size */
-            margin-top: 20px;
-        }
-
-        /* Image rotation: East to West */
-        img {
-            max-width: 30%; /* Decrease the logo size */
+        .learn-more-grid img {
+            width: 100%;
             height: auto;
-            margin: 0 auto; /* Center the image */
-            display: block; /* Make it block to center properly */
-            animation: rotateEastWest 15s linear infinite; /* East to West rotation effect */
+            display: block;
         }
-
-        @keyframes rotateEastWest {
-            0% { transform: rotateY(0deg); } /* Start from 0 degrees */
-            100% { transform: rotateY(360deg); } /* Rotate to 360 degrees */
+        .learn-more-grid .grid-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
         }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 1024px) { /* Tablet and smaller laptops */
-            header h1 {
-                font-size: 1.6em;
-            }
-            nav a {
-                padding: 10px 25px;
-                font-size: 1em;
-            }
-            section {
-                margin-top: 10px;
-            }
-            section h2 {
-                font-size: 1.4em;
-            }
+        .learn-more-grid .grid-item h3 {
+            padding: 15px;
+            background: #fff;
+            margin: 0;
+            font-size: 18px;
         }
-
-        @media (max-width: 768px) { /* Mobile devices */
-            nav {
-                flex-direction: row;
-                align-items: center;
-            }
-            nav a {
-                margin: 5px;
-                width: auto;
-            }
-            .container {
-                margin: 5px;
-                padding: 10px;
-            }
-            header h1 {
-                font-size: 1.5em;
-            }
-            section h2 {
-                font-size: 1.3em;
-            }
-            footer {
-                font-size: 0.7em;
-            }
-        }
-
-        @media (max-width: 480px) { /* Extra small devices */
-            nav a {
-                padding: 8px 15px;
-                font-size: 0.9em;
-            }
-            section h2 {
-                font-size: 1.2em;
-            }
-            footer {
-                font-size: 0.6em;
-            }
+        /* Additional CSS for bolding */
+        .header-test span {
+            font-weight: bold; /* Make the text bold */
         }
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- Background layer for animation -->
-    <header>
-        <h1>YNS COMPANY [Pvt] . Ltd . ,</h1>
-    </header>
-    <nav>
-        <a href="#about">About us </a>
-        <a href="#Project works">Project works </a>
-        <a href="#contact us">Contact us </a>
-        <br><br>
-        <center><img src="ynsofc.jpeg" alt="YNS Company Logo"></center> <!-- Logo image here -->
-    </nav>
+
+<!-- Existing Content -->
+<div id="header">
     <div class="container">
-        <section id="about">
-            <h2> About us </h2>
-            <p>YNS Company is a passionate startup focused on innovation and solving real-world problems. We work in exciting fields like robotics, AI, computer vision, and engineering.</p>
-            <ul>
-                <li><strong>Innovative Projects:</strong> We create new and groundbreaking technologies.</li>
-
-                <li><strong>Interdisciplinary Team:</strong> Our team combines skills from different fields to find the best solutions.</li>
-
-                <li><strong>Focus Areas:</strong> Robotics, Artificial Intelligence (AI), Computer Vision, and Engineering.</li>
-
-                <li><strong>Engineering Expertise:</strong> Our team excels in engineering, creating efficient systems and cutting-edge designs.</li>
-
-                <li><strong>Computer Vision Skills:</strong> We develop systems that allow machines to interpret and understand visual data.</li>
-
-                <li><strong>Real-World Solutions:</strong> We tackle everyday challenges by applying advanced technology and engineering skills.</li>
-
-                <li><strong>Pushing Boundaries:</strong> We’re always striving to go beyond limits in technology and research.</li>
-
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Service</a></li>
+                <li><a href="#services">Works</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
-        </section>
-        <section id="Project works">
-            <h2> Project works </h2>
-            <p>Check out some of our works:</p>
-            <p><strong><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer"> GitHub repositories </a></strong> </p>
-            <p> Cooking...🦺 </p> <!-- Placeholder text -->
-        </section>
-        <section id="contact us">
-            <h2> Contact us </h2>
-            <p>Feel free to get in touch:</p>
-            <ul>
-                <li><strong><a href="YNS Registration Form.html">Register here</a></strong> 📝</li>
-                <li><strong><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Founder & CEO</a></strong> 🦸</li> <!-- Normal font size for Founder & CEO -->
-                <li>Email: yeshwanthe2006@gmail.com <strong><a href="mailto:yeshwanthe2006@gmail.com">Send Email</a></strong> 📩 </li>
-                <li>Phone: <strong> 📞 8072873208</strong> </li>
-            </ul>
-        </section>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-test">
+            <p><span>Yeshwanth.ECE </span> </p>
+            <h1>Time to <span>Feed your curiosity</span> <br> with <a href="https://yashwanth-eh.github.io/YNS/">YNS</a></h1>
+        </div>
     </div>
-    <footer>
-        <h3>&copy; 2025 YNS COMPANY [Pvt] . Ltd. All rights reserved. 🌎 <h3>
-    </footer>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h2>Computer Vision Solutions</h2>
+                    <p>Object detection, object tracking, video analysis, and image processing for various applications.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h2>Machine Learning Models</h2>
+                    <p>Development and deployment of machine learning models for predictive maintenance, anomaly detection, and other use cases.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+                <div class="layer">
+                    <h2>AI-Powered Solutions</h2>
+                    <p>End-to-end AI solutions, including data preprocessing, model training, deployment, and monitoring, leveraging cutting-edge techniques like deep learning.</p>
+                    <a href="https://yashwanth-eh.github.io/YNS/#Project%20works"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<!-- Existing Works Section -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">MY Works</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-pen-nib"></i>
+                <h2>My Projects</h2>
+                <p>Innovative computer vision and machine learning solutions:</p>
+                <ul>
+                    <li>Contactless biometric systems</li>
+                    <li>Retail engagement tracking</li>
+                    <li>Predictive maintenance models</li>
+                </ul>                
+                <a href="#learn-more">Click Project</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-blog"></i>
+                <h2>MY Blog</h2>
+                <p>Sharing insightful articles, tutorials, and experiences on Computer Vision, Machine Learning, and AI-powered solutions.</p>
+                <a href="https://yashwanth-eh.github.io/YNS/#Project%20works" target="_blank">Visit Blog</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <h2>Daily Ideas</h2>
+                <p>Sharing creative ideas, inspirations, and behind-the-scenes glimpses of my projects on Instagram.</p>
+                <a href="https://www.instagram.com/yash_fx/" target="_blank">Follow on Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add this script to your existing JavaScript
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var learnMoreLink = document.querySelectorAll('a[href="#learn-more"]');
+        var learnMoreSection = document.getElementById('learn-more');
+
+        learnMoreLink.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                learnMoreSection.style.display = 'block';
+                // You can add more logic here if needed
+            });
+        });
+    });
+</script>
+
+
+<!-- New Learn More Section -->
+<div id="learn-more" class="learn-more-section" style="display: none;">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="learn-more-grid">
+            <!-- Example grid items -->
+            <div class="grid-item">
+                <a href=""><img src="1.png" alt="Image 1"><h4>Helps to find customers engagement throught camera</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link "><img src="2.png" alt="Image 2"><h4>I used MLOPS to predict the machine failures</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="3.png" alt="Image 3"><h4>Its an contactless biometric system using camera to detect palm prints</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="4.png" alt="Image 4"><h4>Contactless Gesture Controller with vending machine GUI</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="change the image and give link"><img src="5.png" alt="Image 5"><h4>Video analytics for retail shops checkout counters</h4></a>
+            </div>
+            <div class="grid-item">
+                <a href="#"><img src="6.png" alt="Image 6"><h4>Cooking</h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="yash2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>"Hey, I'm Yashwanth, an ECE enthusiast diving into the world of computer vision and electronics, blending tech innovation with startup ambition and engineering creativity." </p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab active-tab" id="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                            <li>Computer Vision</li>
+                            <li>Web Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab" id="experience">
+                        <h3>Experience</h3>
+                        <p>Interned at XYZ company, where I developed machine learning models for predictive maintenance and automated data analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-200px";
+    }
+
+    function opentab(tabName) {
+        var i;
+        var tabContents = document.getElementsByClassName("tab");
+        var tabLinks = document.getElementsByClassName("tab-links");
+
+        for (i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active-tab");
+        }
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].classList.remove("active-link");
+        }
+
+        document.getElementById(tabName).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+
 </body>
 </html>
