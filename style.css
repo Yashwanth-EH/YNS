@@ -438,9 +438,5 @@ nav .fas {
     .contact-right {
         flex-basis: 100%;
     }
-    /*--top text---*/
-    #sidemenu li a {
-    font-size: 18px;   /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-}
+
 }
