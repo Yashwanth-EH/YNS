@@ -65,7 +65,7 @@ nav ul li a::after {
     content: "";
     width: 0%;
     height: 3px;
-    background: #0f7cd4;
+    background: #00aef3;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -87,23 +87,23 @@ nav ul li a:hover::after {
 }
 
 @keyframes colorChange {
-    0% { color: #b9eb2f; }    /* Color 1 */
-    8.33% { color: #f39c12; } /* Color 2 */
-    16.67% { color: #e74c3c; } /* Color 3 */
-    25% { color: #3498db; }   /* Color 4 */
-    33.33% { color: #9b59b6; } /* Color 5 */
-    41.67% { color: #2ecc71; } /* Color 6 */
-    50% { color: #e67e22; }   /* Color 7 */
-    58.33% { color: #1abc9c; } /* Color 8 */
-    66.67% { color: #34495e; } /* Color 9 */
-    75% { color: #f1c40f; }   /* Color 10 */
-    83.33% { color: #c0392b; } /* Color 11 */
-    91.67% { color: #2980b9; } /* Color 12 */
-    100% { color: #b9eb2f; }  /* Back to Color 1 */
+    0% { color: #3498db; }    /* Light Blue */
+    8.33% { color: #8e44ad; } /* Violet */
+    16.67% { color: #5dade2; } /* Sky Blue */
+    25% { color: #9b59b6; }   /* Medium Violet */
+    33.33% { color: #2980b9; } /* Deep Blue */
+    41.67% { color: #7d3c98; } /* Dark Violet */
+    50% { color: #85c1e9; }   /* Soft Blue */
+    58.33% { color: #6c3483; } /* Dark Purple */
+    66.67% { color: #1abc9c; } /* Blue-Green */
+    75% { color: #5b2c6f; }   /* Dark Pink-Violet */
+    83.33% { color: #154360; } /* Dark Blue */
+    91.67% { color: #2e86c1; } /* Light Navy */
+    100% { color: #3498db; }  /* Back to Light Blue */
 }
 
 .header-test h1 span {
-    animation: colorChange 15s linear infinite; /* Change color every 15 seconds */
+    animation: colorChange 30s linear infinite;
 }
 
 
@@ -199,7 +199,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-    background: #131312;
+    background: #050125;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -216,19 +216,19 @@ nav ul li a:hover::after {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-    color: #050505; /* Changed to white */
+    color: #ffffff; /* Changed to white */
 }
 
 .services-list div a {
     text-decoration: none;
-    color: #030303; /* Changed to white */
+    color: #ffffff; /* Changed to white */
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 
 .services-list div:hover {
-    background: #0f7cd4;
+    background: #0f7cd4; 
     transform: translateY(-10px);
 }
 
@@ -261,7 +261,7 @@ nav ul li a:hover::after {
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #0f7cd4);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #050125);
     border-radius: 10px;
     position: absolute;
     left: 0;
