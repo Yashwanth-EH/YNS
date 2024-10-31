@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YNS COMPANY [Pvt] . Ltd </title>
+    <title>YNS COMPANY [Pvt] . Ltd</title>
     <meta name="description" content="YNS Company is a passionate startup dedicated to creating amazing projects and applications across various scientific disciplines, including robotics, AI, computer vision, and engineering.">
     <link rel="icon" href="yns.jpg">
     
     <style>
         /* Base styles */
         body {
-            font-family: 'Times New Roman', serif; /* Changed font to Times New Roman */
+            font-family: 'Times New Roman', serif;
             margin: 0;
             padding: 0;
             color: #010207;
-            overflow: hidden; /* Prevent scrollbars */
-            height: 100vh; /* Full height */
+            overflow: hidden;
+            height: 100vh;
             display: flex;
-            flex-direction: column; /* Vertical layout */
+            flex-direction: column;
         }
 
         /* Moving background */
@@ -27,45 +27,50 @@
         }
 
         .background {
-            background-image: url("image1.png"); /* Background image */
+            background-image: url("image1.png");
             background-size: cover;
-            background-repeat: repeat; /* Repeat the image */
-            animation: moveBackground 30s linear infinite; /* Adjust speed here */
+            background-repeat: repeat;
+            animation: moveBackground 30s linear infinite;
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Send background behind content */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 10px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight background for readability */
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Allow container to grow */
-            display: flex;
-            flex-direction: column; /* Stack sections vertically */
-            overflow-y: auto; /* Enable scrolling if content overflows */
+            z-index: -1;
         }
 
         header {
             background-color: rgba(15, 70, 219, 0.8);
             color: white;
-            padding: 5px 0; /* Decreased padding */
-            text-align: center;
-            font-size: 0.9em; /* Slightly reduced font size */
+            padding: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
         }
 
-        nav {
+        .header-title {
+            flex-grow: 1;
             text-align: center;
-            margin: 10px 0;
-            display: flex; /* Flexbox for horizontal alignment */
-            justify-content: center; /* Center the navigation items */
-            flex-wrap: wrap; /* Wrap items on smaller screens */
+        }
+
+        .header-title h1 {
+            font-size: 1.2em;
+        }
+
+        /* Navbar styles */
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1;
         }
 
         nav a {
@@ -80,6 +85,7 @@
             font-size: 1em;
             font-weight: bold;
             display: inline-block;
+            text-align: left;
         }
 
         nav a:hover {
@@ -87,12 +93,42 @@
             transform: scale(1.05);
         }
 
+        /* Hamburger menu icon */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 2px;
+            background-color: #fff;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        /* Other styles */
+        .container {
+            max-width: 1200px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgb(57, 107, 216);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            opacity: 0.79;
+            color: white; /* Set text color to white */
+        }
+
         section {
             padding: 15px;
             margin-top: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex-grow: 1;
         }
 
         section h2 {
@@ -103,17 +139,18 @@
             background-color: rgba(0, 0, 255, 0.8);
             color: #fff;
             text-align: center;
-            padding: 5px 0; /* Decreased padding */
-            font-size: 1em; /* Reduced font size */
+            padding: 1px 0;
+            font-size: 0.7em;
             margin-top: 20px;
+            width: 100%;
         }
 
         img {
-            max-width: 30%; /* Decrease the logo size */
+            max-width: 30%;
             height: auto;
-            margin: 0 auto; /* Center the image */
-            display: block; /* Make it block to center properly */
-            animation: rotateImage 10s linear infinite; /* Horizontal rotation effect */
+            margin: 0 auto;
+            display: block;
+            animation: rotateImage 10s linear infinite;
         }
 
         @keyframes rotateImage {
@@ -121,113 +158,96 @@
             100% { transform: rotateY(360deg); }
         }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 1024px) { /* Tablet and smaller laptops */
-            header h1 {
-                font-size: 1.6em;
-            }
-            nav a {
-                padding: 10px 25px;
-                font-size: 1em;
-            }
-            section {
-                margin-top: 10px;
-            }
-            section h2 {
-                font-size: 1.4em;
-            }
-        }
-
-        @media (max-width: 768px) { /* Mobile devices */
-            nav {
-                flex-direction: row;
-                align-items: center;
-            }
-            nav a {
-                margin: 5px;
-                width: auto;
-            }
-            .container {
-                margin: 5px;
-                padding: 10px;
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            header {
+                padding: 5px;
             }
             header h1 {
                 font-size: 1.5em;
             }
-            section h2 {
-                font-size: 1.3em;
-            }
             footer {
-                font-size: 0.7em;
+                padding: 3px 0;
+                font-size: 0.9em;
             }
         }
 
-        @media (max-width: 480px) { /* Extra small devices */
+        @media (max-width: 768px) {
+            header {
+                padding: 5px;
+            }
+            header h1 {
+                font-size: 1.3em;
+            }
             nav a {
-                padding: 8px 15px;
                 font-size: 0.9em;
             }
-            section h2 {
-                font-size: 1.2em;
-            }
-            footer {
-                font-size: 0.6em;
-            }
+        }
+
+        /* Additional styles for spacing */
+        .points-list li {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- Background layer for animation -->
+    <div class="background"></div>
     <header>
-        <h1>YNS COMPANY [Pvt] . Ltd . ,</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header-title">
+            <h1>YNS COMPANY [Pvt] . Ltd . ,</h1>
+        </div>
     </header>
-    <nav>
-        <a href="#about">About us </a>
-        <a href="#Project works">Project works </a>
-        <a href="#contact us">Contact us  </a>
-        <br><br>
-        <center><img src="ynsofc.jpeg" alt="YNS Company Logo"></center> <!-- Logo image here -->
+    <nav id="nav-menu">
+        <a href="#about">About us</a>
+        <a href="#Project works">Project works</a>
+        <a href="#contact us">Contact us</a>
+        <img src="ynsofc.jpeg" alt="YNS Company Logo">
     </nav>
     <div class="container">
         <section id="about">
-            <h2>About us </h2>
+            <img src="ynsofc.jpeg" alt="YNS Company Logo">
+            <h2>About us</h2> 
             <p>YNS Company is a passionate startup focused on innovation and solving real-world problems. We work in exciting fields like robotics, AI, computer vision, and engineering.</p>
-            <ul>
-                <br><li><strong>Innovative Projects:</strong> We create new and groundbreaking technologies.</li></br>
-
-                <br><li><strong>Interdisciplinary Team:</strong> Our team combines skills from different fields to find the best solutions.</li></br>
-
-                <br><li><strong>Focus Areas:</strong> Robotics, Artificial Intelligence (AI), Computer Vision, and Engineering.</li></br>
-
-                <br><li><strong>Engineering Expertise:</strong> Our team excels in engineering, creating efficient systems and cutting-edge designs.</li></br>
-
-                <br><li><strong>Computer Vision Skills:</strong> We develop systems that allow machines to interpret and understand visual data.</li></br>
-
-                <br><li><strong>Real-World Solutions:</strong> We tackle everyday challenges by applying advanced technology and engineering skills.</li></br>
-
-                <br><li><strong>Pushing Boundaries:</strong> We’re always striving to go beyond limits in technology and research.</li></br>
-
+            <ul class="points-list">
+                <li><strong>Innovative Projects:</strong> We create new and groundbreaking technologies.</li>
+                <li><strong>Interdisciplinary Team:</strong> Our team combines skills from different fields to find the best solutions.</li>
+                <li><strong>Focus Areas:</strong> Robotics, Artificial Intelligence (AI), Computer Vision, and Engineering.</li>
+                <li><strong>Engineering Expertise:</strong> Our team excels in engineering, creating efficient systems and cutting-edge designs.</li>
+                <li><strong>Computer Vision Skills:</strong> We develop systems that allow machines to interpret and understand visual data.</li>
+                <li><strong>Real-World Solutions:</strong> We tackle everyday challenges by applying advanced technology and engineering skills.</li>
+                <li><strong>Pushing Boundaries:</strong> We’re always striving to go beyond limits in technology and research.</li>
+                <li><strong>Sustainable Innovations:</strong> We focus on eco-friendly technologies to promote sustainability in our projects.</li>
+                <li><strong>Collaboration with Experts:</strong> We partner with industry leaders and researchers to enhance our capabilities.</li>
+                <li><strong>Community Engagement:</strong> We actively participate in community programs to promote STEM education.</li>
+                <li><strong>Continuous Learning:</strong> Our team is committed to staying updated with the latest advancements in technology.</li>
             </ul>
         </section>
         <section id="Project works">
             <h2>Project works</h2>
             <p>Check out some of our works:</p>
             <p><strong><a href="https://github.com/Yashwanth-EH" target="_blank" rel="noopener noreferrer">Yeshwanth GitHub</a></strong> </p>
-            <p>Cooking...🧩</p> <!-- Placeholder text -->
+            <p>Cooking...🧩</p>
         </section>
         <section id="contact us">
-            <h2>Contact us </h2>
+            <h2>Contact us</h2>
             <p>Feel free to get in touch:</p>
-            <ul>
-                <li><strong><a href="YNS Registration Form.html">Register here</a></strong> 📝</li>
-                <li><strong><a href="https://www.instagram.com/yash_fx" target="_blank" rel="noopener noreferrer">Founder & CEO</a></strong> 🦸 </li>
-                <li>Email: yeshwanthe2006@gmail.com <strong><a href="mailto:yeshwanthe2006@gmail.com">Send Email</a></strong> 📩 </li>
-                <li>Phone: <strong> 📞 8072873208</strong> </li>
-            </ul>
+            <p><strong>Email:</strong> <a href="mailto:info@ynscompany.com">info@ynscompany.com</a></p>
         </section>
     </div>
     <footer>
         <p>&copy; 2024-25 YNS COMPANY [Pvt] . Ltd. All rights reserved. 🌍</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 </body>
 </html>
